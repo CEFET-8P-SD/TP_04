@@ -6,8 +6,8 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class ServerThreadThread extends Thread {
-    private ServerThread serverThread;
-    private Socket socket;
+    private final ServerThread serverThread;
+    private final Socket socket;
     private PrintWriter printWriter;
 
     public ServerThreadThread(Socket socket, ServerThread serverThread) {

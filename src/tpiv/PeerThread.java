@@ -8,7 +8,7 @@ import javax.json.Json;
 import javax.json.JsonObject;
 
 public class PeerThread extends Thread {
-    private BufferedReader bufferedReader;
+    private final BufferedReader bufferedReader;
 
     public PeerThread(Socket socket) throws IOException {
         bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -26,7 +26,6 @@ public class PeerThread extends Thread {
                 flag = false;
                 interrupt();
             }
-
         }
     }
 }
