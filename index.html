@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <title>Chat peer to peer</title>
+    <link rel='stylesheet' href='style.css' type='text/css'/>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/socket.io.js"></script>
+    <script src="src/chat.js"></script>
+</head>
+<body>
+<div class="onlineUsersContainer">
+    <div class="userInfo">
+        Bem vindo <label id="myName">usuário</label> !!
+    </div>
+    <div>
+        <ul id="onlineUsers"></ul>
+    </div>
+</div>
+<div class="userFriend">
+    <label id="friendName">Selecione um usuário</label>
+</div>
+<div class="chatContainer">
+    <ul id="messages"></ul>
+    <form id="form" action="" onsubmit="return submitMessage();">
+        <input type="hidden" id="user" value=""/>
+        <input id="writeMessage" autocomplete="off" placeholder="Escreva sua mensagem aqui ..."/>
+    </form>
+</div>
+</body>
+</html>
